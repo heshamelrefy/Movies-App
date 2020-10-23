@@ -28,9 +28,16 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+
+            ]
           },
           "configurations": {
             "production": {
@@ -91,10 +98,10 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.scss"
+          "styles": [
+            
             ],
-            "scripts": []
+            "scripts": []  
           }
         },
         "lint": {
@@ -123,6 +130,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "app2"
+    }
+  },
+  "defaultProject": "app2",
+  "cli": {
+    "analytics": false
+  }
 }

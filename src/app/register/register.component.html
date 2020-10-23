@@ -1,0 +1,46 @@
+<section>
+    <form class=" w-75 m-auto py-5"  [formGroup]='registerForm' (ngSubmit)='getInfoForms(registerForm)'>
+        <h2>Register Forms</h2>
+        <div *ngIf="dis" class="alert alert-danger py-2 ">
+            <p>Not Valid </p>
+        </div>
+        <div class="form-group">
+            <label >UserName :</label>
+        <input 
+        [class.is-valid]="registerForm.get('first_name').errors == null && registerForm.get('first_name').touched"
+        formControlName= 'first_name' class=" form-control" type="text">
+        <p *ngIf="registerForm.get('first_name').errors != null && registerForm.get('first_name').touched" class="py-2 text-danger">First Name invalid</p>
+        </div>
+        <div class="form-group">
+        <label >lastName :</label>
+        <input 
+        [class.is-valid]="registerForm.get('last_name').errors == null && registerForm.get('last_name').touched"
+        formControlName= 'last_name' class=" form-control" type="text">
+        <p 
+        *ngIf="registerForm.get('last_name').errors != null && registerForm.get('last_name').touched"
+        class="py-2 text-danger">Last Name invalid</p>
+        </div>
+        <div class="form-group">
+        <label >E-mail :</label>
+        <input 
+        [class.is-valid]="registerForm.get('email').errors == null && registerForm.get('email').touched"
+        formControlName= 'email' class=" form-control" type="email">
+        <p 
+        *ngIf="registerForm.get('email').errors != null && registerForm.get('email').touched"
+        class="py-2 text-danger">Email invalid</p>
+        </div>
+        <div class="form-group">
+        <label >Password :</label>
+        <input 
+        [class.is-valid]="registerForm.get('password').errors == null && registerForm.get('password').touched"
+        formControlName= 'password' class=" form-control" type="password">
+        <p 
+        *ngIf="registerForm.get('password').errors != null && registerForm.get('password').touched"
+        class="py-2 text-danger">Password invalid</p>
+        </div>
+        <button [disabled]="registerForm.invalid" type="submit" class="btn btn-info">
+            Register
+        </button>
+      
+    </form>
+</section>

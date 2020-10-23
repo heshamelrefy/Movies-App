@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-4">
+       <div class="movie-image py-3">
+        <img [src]="imgPrefix+movieDetails?.poster_path" class=" img-fluid" alt="">
+       </div>
+    </div>
+    <div class="col-md-8">
+        <div class="movie-caption py-3">
+            <h2 class="py-2">{{movieDetails?.title}}{{movieDetails?.name}}</h2>
+            <p class=" lead">{{movieDetails?.tagline}}</p>
+            <span class=" bg-info p-2 rounded mx-2 " *ngFor = 'let gen of movieDetails?.genres'>{{gen.name}}</span>
+            <p class=" lead py-3">{{movieDetails?.overview}}</p>
+        </div>
+    </div>
+</div>
