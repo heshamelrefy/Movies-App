@@ -15,7 +15,7 @@ export class AuthService {
 
   }
 
-currentUsers=new BehaviorSubject(null)  
+currentUsers=new BehaviorSubject(null)
 
 register(registerFormValue):Observable<any>
 {
