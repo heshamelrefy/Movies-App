@@ -1,5 +1,6 @@
 <div class="p-5">
     <input [(ngModel)]='term' class=" form-control m-auto w-50">
+    <!-- <p class=" text-white">{{term}}</p> -->
     
 </div>
 <div class="row">
@@ -12,7 +13,7 @@
             <div class="hieght2 my-2"></div>
         </div>
     </div>
-    <div *ngFor="let movie of trendingMovies|search:term" class="col-md-2">
+    <div *ngFor="let movie of trendingMovies | search:term" class="col-md-2">
         <div [routerLink]="['/moviesdetails' , movie.media_type , movie.id]" class="movies">
             <img [src]="imgPrefix+movie.poster_path" class=" img-fluid" alt="">
             <h3 class=" h6">{{movie.title}}{{movie.name}}</h3>
@@ -21,6 +22,14 @@
             </p>
         </div>
     </div>
+    <!-- <div class="col-md-12">
+        <div class="page text-center py-4">
+            
+            
+            
+            <button class="btn btn-dark text-white p-2 bg-primary " >></button>
+        </div>
+    </div> -->
     
 </div>
 <div class="row">

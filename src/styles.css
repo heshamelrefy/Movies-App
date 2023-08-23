@@ -1,6 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
-/* body {
-  background-color: #343a40;
+body {
+  background-color: #131010;
   color: white;
-} */
+}
+
+.movies-caption .hieght1 {
+  height: 1px;
+  width: 25%;
+  background-color: gray;
+}
+
+.movies-caption .hieght2 {
+  height: 1px;
+  width: 100%;
+  background-color: gray;
+}
+
+.tv-caption .hieght1 {
+  height: 1px;
+  width: 25%;
+  background-color: gray;
+}
+
+.tv-caption .hieght2 {
+  height: 1px;
+  width: 100%;
+  background-color: gray;
+}
+
+.logOut {
+  cursor: pointer;
+}
+
+img {
+  cursor: pointer;
+}
 /*# sourceMappingURL=styles.css.map */

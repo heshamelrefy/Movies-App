@@ -12,7 +12,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  {path: '' , redirectTo:'register' , pathMatch:'full'},
+  {path: '' , redirectTo:'home' , pathMatch:'full'},
   {path: 'home' , canActivate:[AuthGuard] ,component:HomeComponent},
   {path: 'movies' ,canActivate:[AuthGuard] , component:MoviesComponent},
   {path: 'about' ,canActivate:[AuthGuard] , component:AboutComponent},

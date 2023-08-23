@@ -23,6 +23,7 @@ import { SearchPipe } from './search.pipe';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

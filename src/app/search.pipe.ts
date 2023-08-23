@@ -10,7 +10,7 @@ export class SearchPipe implements PipeTransform {
     return movies;
     }
     return movies.filter(function(movies) {
-      return movies.title.includes(term)
+      return movies.title.toLowerCase().includes(term.toLowerCase());
     })
   }
 

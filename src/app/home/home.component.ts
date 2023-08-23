@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../auth.service'
+import {SearchPipe} from '../search.pipe'
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import {AuthService} from '../auth.service'
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  num:number=1;
   trendingMovies:object[];
   trendingTv:object[];
   term:string;
@@ -16,15 +17,15 @@ export class HomeComponent implements OnInit {
   constructor(private _AuthService:AuthService) {
 
     _AuthService.getTrendingMovies('movies').subscribe((data)=>{
-      this.trendingTv = data.results.slice(0,10) ;
+      this.trendingMovies = data.results.slice(0,10);
     })
 
    _AuthService.getTrendingTv('tv').subscribe((data)=>{
-     this.trendingMovies = data.results.slice(0,10) ;
+     this.trendingTv = data.results ;
    })
-
+   
    }
-
+   
   ngOnInit(): void {
   }
 
